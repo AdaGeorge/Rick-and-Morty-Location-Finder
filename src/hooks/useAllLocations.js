@@ -12,6 +12,7 @@ const useAllLocations = (inputValue) => {
        const URL = `https://rickandmortyapi.com/api/location/?name=${inputValue}`
        axios.get(URL)
         .then((res)=>{
+          //mandamos la informacion al estado y cancelamos el isloading state
           setAllLocations(res.data.results)
           setIsLoading(false)
         }) 

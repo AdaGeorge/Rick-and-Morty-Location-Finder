@@ -4,9 +4,12 @@ import Loader from '../Loader/Loader'
 import './InputSearch.css'
 
 const InputSearch = ({ handlerClick }) => {   
+
+  //Estado del input
   
   const [inputValue, setInputValue] = useState('')
 
+  //Llamado al hook con info de todas las locaciones 
   const {allLocations, isLoading} = useAllLocations(inputValue) 
 
 

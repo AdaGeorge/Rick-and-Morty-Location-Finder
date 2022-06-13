@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Tarjeta con informacion de la location 
 const LocationCard = ({location}) => {
   return (
     <article className='location-card'>
