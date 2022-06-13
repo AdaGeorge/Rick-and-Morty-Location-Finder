@@ -1,0 +1,75 @@
+.App{
+  width: 100%;
+  background-image: url(https://i.gifer.com/origin/58/5888d7b2696e39f2be7b972622348632.gif);
+}
+
+.header{
+  position: relative;
+  background: url(https://images.alphacoders.com/114/1148253.jpg) no-repeat center/cover;
+  height: 400px;
+  width: 100%;
+  top: 0;
+}
+
+.location-card{
+  color: #fff;
+  background-color: rgb(1, 24, 6);
+  width: 60%;
+  text-align: center;
+  margin: 2em auto;
+  padding: 5px;
+  border-radius: 2em;
+  box-shadow: 1px 1px 10px greenyellow;
+}
+
+.location-card-description{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body{
+  background-color: black;
+  width: 100%;
+}
+
+.list{
+  width: 70%;
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  gap: 4em;
+}
+
+.footer{
+  height: 100px;
+  background-color: rgb(26, 30, 26);
+  font-size: 4em;
+  text-align: center;
+  line-height: 120px;
+  
+}
+
+.footer a{
+  color: rgb(157, 236, 38);
+}
+
+
+@media (max-width: 1024px) {
+
+  .header{
+    height: 200px;
+  }
+  
+  .location-card{
+    width: 90%;
+    margin: 1em auto;
+  }
+  
+  .list{
+    width: 100%;
+  }
+
+}
