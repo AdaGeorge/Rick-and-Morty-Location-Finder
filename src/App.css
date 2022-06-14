@@ -44,12 +44,13 @@ body{
 }
 
 .footer{
+  display: flex;
   height: 100px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
   background-color: rgb(26, 30, 26);
   font-size: 4em;
-  text-align: center;
-  line-height: 120px;
-  
 }
 
 .footer a{
