@@ -17,7 +17,7 @@
   width: 60%;
   text-align: center;
   margin: 2em auto;
-  padding: 5px;
+  padding: 10px;
   border-radius: 2em;
   box-shadow: 1px 1px 10px greenyellow;
 }
@@ -25,6 +25,7 @@
 .location-card-description{
   display: flex;
   justify-content: space-evenly;
+  margin-top: 1em;
 }
 
 body{
