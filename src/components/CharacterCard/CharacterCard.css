@@ -1,3 +1,9 @@
 .character-card {
     text-align: center;
+    line-height: 2em;
 }
+
+.character-card img{
+    border-radius: 2em;
+}
+
