@@ -26,9 +26,9 @@
 .list-all-names{
     display: grid;
     position: absolute;
-    width: 98%;
-    top: 2.2em;
-    left: 1%;
+    width: 96%;
+    top: 1.6em;
+    left: 2%;
 }
 
 .list-all-names button{

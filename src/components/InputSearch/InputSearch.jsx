@@ -13,12 +13,13 @@ const InputSearch = ({ handlerClick }) => {
   const {allLocations, isLoading} = useAllLocations(inputValue) 
 
 
-
-
 //Creacion de la lista de nombres sugerencia del buscador
   const allNames = allLocations?.map(locationSrc => (
     <button  
-    onClick ={handlerClick} 
+    onClick ={(e)=>{
+      handlerClick(e)
+      setInputValue('')
+    }} 
     key={locationSrc.url}
     value={locationSrc.id}
     >

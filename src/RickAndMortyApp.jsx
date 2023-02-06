@@ -5,6 +5,8 @@ import CharacterCard from './components/CharacterCard/CharacterCard'
 import InputSearch from './components/InputSearch/InputSearch'
 import { useState } from 'react'
 import Footer from './components/Footer'
+import Pagination from './components/Pagination'
+import usePaginationLogic from './hooks/usePaginationLogic'
 
 
 function RickAndMortyApp() {
@@ -13,17 +15,24 @@ function RickAndMortyApp() {
   //estado de la busqueda asignada 
   const [searchedValue, setSearchedValue] = useState()
  
-
+  //Paginacion
+    const [currentPage, setCurrentPage] = useState(1)
 
   //hook que hace el llamado a la API de la ubicacion
   const {location} = useLocation(searchedValue)
 
+  let paginationResponse
+
+  //condicional para usar paginacion
+  if(location !== undefined){
+    paginationResponse = usePaginationLogic(currentPage, location)
+  }
 
 
   //Creacion de la lista de cartas de personaje 
   //Usando el array residents recibimos la informacion de los personajes y la mandamos por prop
 
-  const people = location?.residents.map(resident => (
+  const people = paginationResponse?.arrayResidents.map(resident => (
         <CharacterCard 
         resident={resident}
         key = {resident}
@@ -52,11 +61,19 @@ function RickAndMortyApp() {
       
       <LocationCard location={location}/>
 
+
       <main className='list'>
         {
           people
         }
       </main>
+
+      <Pagination
+      arrayPages={paginationResponse?.arrayPages}
+      currentPage={currentPage}
+      setCurrentPage={setCurrentPage}
+      quantityPages={paginationResponse?.quantityPages}
+      />
 
       <Footer/>
     </div>

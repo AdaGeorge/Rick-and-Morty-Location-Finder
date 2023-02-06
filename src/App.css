@@ -1,5 +1,7 @@
 .App{
   width: 100%;
+  min-height: 100vh;
+  position: relative;
   background-image: url(https://i.gifer.com/origin/58/5888d7b2696e39f2be7b972622348632.gif);
 }
 
@@ -28,6 +30,46 @@
   margin-top: 1em;
 }
 
+.pagination-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: max-content;
+  margin: 50px auto;
+}
+.pagination-number-container{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+.pagination-prev-next{
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(11, 181, 23);
+  border-radius: 15px;
+}
+.page-number {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  width: 20px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.page-active{
+  background-color: rgb(81, 164, 35);
+}
+
 body{
   background-color: black;
   width: 100%;
@@ -54,6 +96,8 @@ body{
   background-color: rgb(26, 30, 26);
   font-size: 4em;
   margin-top: 1em;
+  position: absolute;
+  bottom: -100px;
 }
 
 .footer a{
